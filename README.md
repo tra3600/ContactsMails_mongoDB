@@ -36,3 +36,10 @@ Notes
 Sécurité : Assurez-vous de sécuriser les informations sensibles comme les identifiants de la base de données et les secrets d'API. Utilisez des variables d'environnement ou des fichiers de configuration sécurisés.
 Scopes Google : Si vous souhaitez récupérer plus d'informations, ajustez les scopes dans authUrl.
 Ce programme fournit une base pour récupérer les contacts d'un compte Gmail et les stocker dans une base de données MongoDB. Vous pouvez l'étendre pour inclure des fonctionnalités supplémentaires ou adapter les sources de contacts à d'autres services e-mail.
+
+
+## Utilisation
+
+1. `npm install`
+2. Copiez `.env.example` vers `.env` et renseignez vos valeurs (ou exportez les variables). Dans la console Google Cloud, activez la People API et ajoutez `http://localhost:3000` aux URI de redirection autorisées.
+3. `npm start` : ouvrez l'URL affichée, autorisez l'accès ; le code est reçu automatiquement par un serveur local, puis les contacts sont importés (upsert par `resourceName`, sans doublons).
